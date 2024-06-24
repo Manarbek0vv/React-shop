@@ -1,0 +1,65 @@
+.message {
+    background-color: white;
+    width: 100%;
+    margin-top: -150px;
+    margin-bottom: -200px;
+}
+
+.message__dark {
+    background-color: rgb(17, 17, 17);
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 200px;
+    box-sizing: content-box;
+}
+
+.title {
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.title__dark {
+    color: white;
+}
+
+.paragraph {
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+    width: 70%;
+}
+
+@media (max-width: 1025px) {
+    .message__info {
+        padding-bottom: 500px;
+    }
+}
+
+@media (max-width: 760px) {
+    .message__info {
+        padding-bottom: 650px;
+    }
+}
+
+@media (max-width: 500px) {
+    .paragraph {
+        width: 90%;
+    }
+}

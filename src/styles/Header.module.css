@@ -1,0 +1,268 @@
+.wrapper {
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+.wrapper__dark {
+    background-color: rgb(24, 24, 24);
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding: 10px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.container__dark {
+    color: white;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    box-sizing: content-box;
+    padding: 10px 60px;
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+
+.list__dark {
+    border: 1px solid rgb(90, 90, 90);
+}
+
+.li {
+    font-size: 20px;
+    color: black;
+}
+
+.li__dark {
+    color: white;
+}
+
+.li:hover {
+    cursor: pointer;
+}
+
+.title {
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.button {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    white-space: nowrap;
+    display: flex;
+    gap: 5px;
+    font-weight: 700;
+    color: black;
+    position: relative;
+    justify-content: center;
+}
+
+.button__dark {
+    border: 1px solid rgb(90, 90, 90);
+    color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.theme {
+    color: rgb(0, 136, 255);
+}
+
+.leave {
+    border: 1px solid black;
+    color: black;
+    position: absolute;
+    bottom: -32px;
+    opacity: 0;
+    z-index: -50;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transition: all 300ms;
+}
+
+.visible {
+    opacity: 1;
+    z-index: 200;
+    display: inline-block;
+}
+
+.leave__dark {
+    border: 1px solid rgb(90, 90, 90);
+    color: white;
+}
+
+.burger {
+    display: none;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.burger__dark {
+    border: 1px solid rgb(90, 90, 90)
+}
+
+.burger::after {
+    content: '';
+    width: 20px;
+    top: 8px;
+    position: absolute;
+    background-color: rgb(164, 6, 255);
+    height: 3px;
+}
+
+.burger::before {
+    content: '';
+    width: 20px;
+    bottom: 8px;
+    position: absolute;
+    background-color: rgb(164, 6, 255);
+    height: 3px;
+}
+
+.burger span {
+    width: 13px;
+    height: 3px;
+    top: 16px;
+    right: 8px;
+    background-color: rgb(164, 6, 255);
+    position: absolute;
+}
+
+@media (max-width: 1279px) {
+    .wrapper {
+        position: fixed;
+        z-index: 200;
+    }
+
+    .burger {
+        display: inline-block;
+        top: -10px;
+        left: -55px;
+        z-index: 100;
+    }
+
+    .burger:hover {
+        cursor: pointer
+    }
+
+    .nav {
+        display: flex;
+        position: fixed;
+        transform: translateX(-21vw);
+        width: 20vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        justify-content: center;
+        border-right: 2px solid black;
+        align-items: flex-start;
+        padding: 80px 0px 0px 0px;
+        background-color: white;
+        transition: all 300ms ease;
+    }
+
+    .nav__dark {
+        border-right: 1px solid rgb(90, 90, 90);
+        background-color: black;
+    }
+
+    .active .nav {
+        transform: translateX(100%);
+    }
+
+    .list {
+        flex-direction: column;
+        padding: 0px;
+        gap: 30px;
+        border: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .burger {
+        top: -1px
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+    .buttons {
+        gap: 10px
+    }
+
+    .container {
+        padding-right: 10px;
+    }
+
+    .wrapper {
+        height: 70px;
+    }
+
+    .leave {
+        bottom: -25px;
+    }
+}
+
+@media (max-width: 550px) {
+    .title {
+        font-size: 16px;
+        margin-left: -50px;
+    }
+
+    .button {
+        font-size: 8px;
+    }
+
+    .li {
+        font-size: 14px;
+    }
+
+    .buttons {
+        gap: 5px
+    }
+
+    .leave {
+        bottom: -20px;
+    }
+}

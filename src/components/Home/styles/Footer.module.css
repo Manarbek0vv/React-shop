@@ -1,0 +1,138 @@
+.footer {
+    background-color: white;
+    width: 100%;
+}
+
+.footer__dark {
+    background-color: rgb(23, 23, 23);
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+
+.footer__info {
+    padding: 150px 60px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;   
+}
+
+.alone {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.parts {
+    display: grid;
+    grid-template: auto / repeat(4, auto);
+    gap: 50px;
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.part__title {
+    color: rgb(111, 0, 255);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.part__text {
+    font-size: 14px;
+}
+
+.part:last-child {
+    max-width: 250px;
+}
+
+.input__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+.input {
+    box-sizing: content-box;
+    padding: 7px 0px;
+    outline: none;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-right: 2px solid gray;
+}
+
+.input__wrapper svg {
+    font-size: 13px;
+    color: rgb(111, 0, 255);
+}
+
+.end svg,
+.end span {
+    color: rgb(111, 0, 255);
+}
+
+.alone__dark,
+.part__text__dark,
+.end__dark {
+    color: white;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline;
+}
+
+.part:not(:last-of-type) .part__text,
+.link {
+    transition: all 200ms;
+}
+
+.part:not(:last-of-type) .part__text:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+@media (max-width: 1030px) {
+    .main {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .parts {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .parts {
+        justify-content: space-between;
+        grid-template: repeat(2, auto) / repeat(2, auto);
+    }
+}
+
+@media (max-width: 584px) {
+    .parts {
+        grid-template: repeat(4, auto) / auto;
+    }
+
+    .footer__info {
+        padding: 150px 20px;
+    }
+}

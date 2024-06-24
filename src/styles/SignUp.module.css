@@ -1,0 +1,147 @@
+.wrapper {
+    width: 100%;
+    background-color: white;
+}
+
+.wrapper__dark {
+    background-color: rgb(17, 17, 17);
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding: 80px 60px
+}
+
+.inner {
+    width: 100%;
+    padding: 40px 70px;
+    border: 4px solid rgb(232, 232, 232);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.inner__dark {
+    border: 4px solid rgb(31, 31, 31);
+    background-color: rgb(22, 22, 22);
+}
+
+.title {
+    font-size: 35px;
+    color: rgb(111, 0, 255);
+    font-weight: 700;
+}
+
+.form {
+    display: grid;
+    grid-template: repeat(2, 109px) / 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text {
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.text__dark {
+    color: white;
+}
+
+.input {
+    width: 100%;
+    display: inline-block;
+    height: 57px;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(215, 215, 215);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    outline: none;
+    font-weight: 400;
+}
+
+.input__dark {
+    border: 1px solid rgb(31, 31, 31);
+    background-color: rgb(16, 16, 16);
+    color: white;
+}
+
+.input:focus {
+    outline: 1px solid rgb(111, 0, 255);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+    max-width: 320px;
+    height: 48px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+.signup {
+    background-color: rgb(111, 0, 255);
+}
+
+.login {
+    background-color: rgb(55, 55, 55);
+}
+
+@media (max-width: 1279px) {
+    .wrapper {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 50px 30px
+    }
+
+    .inner {
+        padding: 20px 35px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 50px 10px;
+    }
+
+    .inner {
+        padding: 15px 25px;
+    }
+
+    .form {
+        gap: 10px;
+        grid-template: repeat(4, 93px) / 1fr;
+    }
+
+    .input {
+        height: 41px;
+    }
+}
